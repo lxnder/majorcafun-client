@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "client-dev": "next dev",
-    "server-dev": "npm run dev --prefix ../server",
+    "server-dev": "npm run dev --prefix ../majorcafun-server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
     "build": "next build",
     "start": "next start",
