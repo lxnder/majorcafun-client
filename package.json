@@ -7,7 +7,7 @@
     "server-dev": "npm run dev --prefix ../majorcafun-server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && next start",
     "build:css": "postcss assets/tailwind.css -o client/assets/main.css",
     "watch:css": "postcss assets/tailwind.css -o client/assets/main.css"
   },
