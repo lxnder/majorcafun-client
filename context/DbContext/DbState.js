@@ -25,7 +25,7 @@ const DbState = props => {
   // Get Activities
   const getActivities = async (categories, groupTypes) => {
     setLoading();
-    let queryString = `${process.env.SERVER_URL}/activities`;
+    let queryString = `${process.env.NEXT_PUBLIC_SERVER_URL}/activities`;
     if (categories.length > 0) {
       queryString += "?categories=" + categories.join();
     }
@@ -41,7 +41,9 @@ const DbState = props => {
   };
   // Get Categories
   const getCategories = async () => {
-    const res = await axios.get(`${process.env.SERVER_URL}/categories`);
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/categories`
+    );
     dispatch({
       type: GET_CATEGORIES,
       payload: res.data,
@@ -49,7 +51,9 @@ const DbState = props => {
   };
   // Get Group Types
   const getGroupTypes = async () => {
-    const res = await axios.get(`${process.env.SERVER_URL}/grouptypes`);
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/grouptypes`
+    );
     dispatch({
       type: GET_GROUP_TYPES,
       payload: res.data,
