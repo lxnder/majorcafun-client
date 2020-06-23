@@ -31,3 +31,6 @@ yarn-error.log*
 
 # heavy videos
 public/assets/*
+
+# tar deploy
+deploy.tar
