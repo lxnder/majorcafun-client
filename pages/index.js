@@ -34,7 +34,7 @@ export default function Home() {
       <ToastContainer />
       <div className="container h-auto px-4 mx-auto">
         <Navbar />
-        <div className="grid grid-cols-12 gap-5 pt-8 pb-16">
+        <div className="grid grid-cols-12 gap-5 pt-0 pb-16 md:pt-8 lg:pt-8 xl:pt-8">
           <DbState>
             <Search />
             <Activities />
