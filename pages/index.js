@@ -5,14 +5,6 @@ import DbState from "../context/DbContext/DbState";
 import { ToastContainer } from "react-toastify";
 import Navbar from "../components/layout/Navbar";
 
-//* Check TypeORM data get
-
-//* Create simple form
-
-//* Add submit fetch with pagination
-
-//* Populate page
-
 export default function Home() {
   const bgStyle = {
     background: "url(bg2.svg)",
