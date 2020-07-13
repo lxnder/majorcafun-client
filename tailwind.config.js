@@ -1,7 +1,10 @@
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./components/**/*.js", "./pages/*.js"],
   theme: {
     extend: {
+      zIndex: {
+        n1: "-1",
+      },
       scale: {
         "102": "1.025",
       },

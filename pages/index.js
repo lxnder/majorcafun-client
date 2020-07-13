@@ -1,32 +1,36 @@
+import classNames from "classnames";
 import Head from "next/head";
+import { ToastContainer } from "react-toastify";
 import Search from "../components//activity/Search";
 import Activities from "../components/activity/Activities";
-import DbState from "../context/DbContext/DbState";
-import { ToastContainer } from "react-toastify";
 import Navbar from "../components/layout/Navbar";
+import DbState from "../context/DbContext/DbState";
 
 export default function Home() {
-  const bgStyle = {
-    background: "url(bg2.svg)",
-    backgroundSize: "cover",
-    position: "fixed",
-    width: "100vw",
-    height: "100vh",
-    zIndex: "-1",
-  };
+  const bgClasses = classNames(
+    "fixed w-screen h-screen",
+    "z-n1 bg-cover bg-no-repeat bg-center"
+  );
+
+  const containerClasses = classNames("container h-auto px-4 mx-auto");
+
+  const mainDivClasses = classNames(
+    "grid grid-cols-12 gap-5",
+    "pt-0 pb-16 md:pt-8 lg:pt-8 xl:pt-8"
+  );
 
   return (
     <>
       <Head>
-        <title>MajorcaFun - Demo</title>
+        <title>MajorcaFun</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div style={bgStyle}></div>
+      <div className={bgClasses} style={{ backgroundImage: `url(bg2.svg)` }} />
       <ToastContainer />
-      <div className="container h-auto px-4 mx-auto">
+      <div className={containerClasses}>
         <Navbar />
-        <div className="grid grid-cols-12 gap-5 pt-0 pb-16 md:pt-8 lg:pt-8 xl:pt-8">
+        <div className={mainDivClasses}>
           <DbState>
             <Search />
             <Activities />

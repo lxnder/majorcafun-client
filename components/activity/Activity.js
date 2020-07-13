@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import classNames from "classnames";
 import PropTypes from "prop-types";
+import React, { useState } from "react";
 import ActivityOverlay from "./ActivityOverlay";
 
 const Activity = ({ activity }) => {
@@ -15,20 +16,35 @@ const Activity = ({ activity }) => {
     setActiveOverlay(!activeOverlay);
   };
 
+  const mainDivClasses = classNames(
+    "grid grid-cols-12",
+    "bg-white bg-opacity-95",
+    "mb-4",
+    "rounded-md",
+    "cursor-pointer",
+    "transition-all transform duration-500 ease-out",
+    "hover:scale-102 hover:bg-opacity-100"
+  );
+
+  const infoClasses = classNames(
+    "p-4",
+    "divide-y divide-gray-200",
+    "col-span-6 sm:col-span-7 lg:col-span-8 xl:col-span-8"
+  );
+
+  const imgClasses = classNames(
+    "bg-center bg-no-repeat bg-cover",
+    "col-span-6 sm:col-span-5 lg:col-span-4 xl:col-span-4",
+    "rounded-r-md"
+  );
+
   return (
     <>
       {activeOverlay && (
         <ActivityOverlay activity={activity} onClose={onClick} />
       )}
-      <div
-        className="grid grid-cols-12 mb-4 transition-all duration-500 ease-out transform bg-white rounded-md cursor-pointer bg-opacity-95 hover:scale-102 hover:bg-opacity-100"
-        id={`activity_${id}`}
-        onClick={onClick}
-      >
-        <div
-          id="info"
-          className="col-span-6 p-4 divide-y divide-gray-200 sm:col-span-7 lg:col-span-8 xl:col-span-8"
-        >
+      <div className={mainDivClasses} id={`activity_${id}`} onClick={onClick}>
+        <div id="info" className={infoClasses}>
           <p className="py-1 text-lg font-semibold ">{name}</p>
           <p className="py-2 text-gray-800">{short_description}</p>
           <div id="tags" className="flex flex-row flex-wrap pt-2">
@@ -42,11 +58,7 @@ const Activity = ({ activity }) => {
             ))}
           </div>
         </div>
-        <div
-          id="image"
-          style={imageStyle}
-          className="col-span-6 bg-center bg-no-repeat bg-cover sm:col-span-5 lg:col-span-4 xl:col-span-4 rounded-r-md"
-        ></div>
+        <div id="image" style={imageStyle} className={imgClasses} />
       </div>
     </>
   );

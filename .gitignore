@@ -34,3 +34,6 @@ public/assets/*
 
 # tar deploy
 deploy.tar
+
+# tailwind
+styles/main.css

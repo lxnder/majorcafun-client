@@ -6,21 +6,21 @@
     "client-dev": "next dev",
     "server-dev": "npm run dev --prefix ../majorcafun-server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
-    "build": "next build",
-    "start": "next build && next start",
-    "build:css": "postcss assets/tailwind.css -o client/assets/main.css",
-    "watch:css": "postcss assets/tailwind.css -o client/assets/main.css"
+    "start": "next start",
+    "build": "NODE_ENV=production next build",
+    "build:css": "postcss styles/index.css -o styles/main.css"
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "classnames": "^2.2.6",
     "next": "9.4.4",
-    "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-toastify": "^6.0.5",
-    "tailwindcss": "^1.4.6"
+    "react-toastify": "^6.0.5"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0"
+    "concurrently": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.4.6"
   }
 }

@@ -1,15 +1,21 @@
 import React, { useContext } from "react";
 import Activity from "./Activity";
 import DbContext from "../../context/DbContext/dbContext";
+import classNames from "classnames";
 
 const Activities = () => {
   const dbContext = useContext(DbContext);
 
   const { activities } = dbContext;
 
+  const initialDivClasses = classNames(
+    "flex flex-col items-center justify-center",
+    "col-span-12 md:col-span-9 lg:col-span-9 xl:col-span-10"
+  );
+
   if (activities[0] === "initial") {
     return (
-      <div className="flex flex-col items-center justify-center col-span-12 md:col-span-9 lg:col-span-9 xl:col-span-10">
+      <div className={initialDivClasses}>
         <p className="text-4xl font-semibold text-center text-blue-600">
           Discover cool activities in Majorca!
         </p>
@@ -20,7 +26,7 @@ const Activities = () => {
     );
   } else if (activities.length < 1) {
     return (
-      <div className="flex flex-col items-center justify-center col-span-12 md:col-span-9 lg:col-span-9 xl:col-span-10">
+      <div className={initialDivClasses}>
         <p className="text-4xl font-semibold text-gray-700">
           No results found :(
         </p>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import DbContext from "../../context/DbContext/dbContext";
 import Checkbox from "../layout/Checkbox";
 import { toast, Slide } from "react-toastify";
+import classNames from "classnames";
 
 const Search = () => {
   const dbContext = useContext(DbContext);
@@ -80,20 +81,51 @@ const Search = () => {
     return s.charAt(0).toUpperCase() + s.slice(1);
   };
 
+  const mainDivClasses = classNames(
+    "col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-2"
+  );
+
+  const formClasses = classNames(
+    "grid grid-cols-12",
+    "px-4 py-1 mb-4",
+    "transition-all duration-500 ease-out transform ",
+    "bg-white bg-opacity-95",
+    "rounded-md",
+    "md:sticky lg:sticky xl:sticky",
+    "md:top-4 lg:top-4 xl:top-4",
+    "hover:bg-opacity-100"
+  );
+
+  const wrapperClasses = classNames(
+    "self-center md:self-auto lg:self-auto xl:self-auto"
+  );
+
+  const filterClasses = classNames(
+    "flex flex-col",
+    "col-span-6",
+    "md:col-span-12 lg:col-span-12 xl:col-span-12",
+    "mt-4 "
+  );
+
+  const submitClasses = classNames(
+    "w-full h-10",
+    "col-span-12",
+    "flex flex-col items-center justify-center",
+    "py-1 mt-8 mb-4",
+    "md:mt-4 lg:mt-4 xl:mt-4",
+    "text-lg font-semibold text-blue-500",
+    "transition-all duration-150 ease-out transform",
+    "border border-blue-500",
+    "rounded-md",
+    "hover:bg-blue-500 hover:text-white",
+    "focus:outline-none"
+  );
+
   return (
-    <div className="col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-2">
-      <form
-        onSubmit={onSubmit}
-        className="grid grid-cols-12 px-4 py-1 mb-4 transition-all duration-500 ease-out transform bg-white rounded-md md:sticky lg:sticky xl:sticky md:top-4 lg:top-4 xl:top-4 bg-opacity-95 hover:bg-opacity-100"
-      >
-        <div
-          id="category-filters"
-          className="flex flex-col col-span-6 mt-4 md:col-span-12 lg:col-span-12 xl:col-span-12"
-        >
-          <div
-            id="wrapper"
-            className="self-center md:self-auto lg:self-auto xl:self-auto"
-          >
+    <div className={mainDivClasses}>
+      <form onSubmit={onSubmit} className={formClasses}>
+        <div id="category-filters" className={filterClasses}>
+          <div id="wrapper" className={wrapperClasses}>
             <p className="mb-2 font-semibold md:ml-2 lg:ml-2 xl:ml-2">
               Category
             </p>
@@ -114,14 +146,8 @@ const Search = () => {
           </div>
         </div>
 
-        <div
-          id="group-type-filters"
-          className="flex flex-col col-span-6 mt-4 md:col-span-12 lg:col-span-12 xl:col-span-12"
-        >
-          <div
-            id="wrapper"
-            className="self-center md:self-auto lg:self-auto xl:self-auto"
-          >
+        <div id="group-type-filters" className={filterClasses}>
+          <div id="wrapper" className={wrapperClasses}>
             <p className="mb-2 font-semibold md:ml-2 lg:ml-2 xl:ml-2">
               Recommended
             </p>
@@ -141,10 +167,7 @@ const Search = () => {
             ))}
           </div>
         </div>
-        <button
-          type="submit"
-          className="flex flex-col items-center justify-center w-full h-10 col-span-12 py-1 mt-8 mb-4 text-lg font-semibold text-blue-500 transition-all duration-150 ease-out transform border border-blue-500 rounded-md md:mt-4 lg:mt-4 xl:mt-4 hover:bg-blue-500 hover:text-white focus:outline-none"
-        >
+        <button type="submit" className={submitClasses}>
           {loading ? (
             <img
               src="spinner.gif"
