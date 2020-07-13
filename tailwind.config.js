@@ -2,6 +2,32 @@ module.exports = {
   purge: ["./components/**/*.js", "./pages/*.js"],
   theme: {
     extend: {
+      colors: {
+        clear: {
+          10: "rgba(255, 255, 255, 0.10)",
+          15: "rgba(255, 255, 255, 0.15)",
+          20: "rgba(255, 255, 255, 0.20)",
+          25: "rgba(255, 255, 255, 0.25)",
+          30: "rgba(255, 255, 255, 0.30)",
+          35: "rgba(255, 255, 255, 0.35)",
+          40: "rgba(255, 255, 255, 0.40)",
+          45: "rgba(255, 255, 255, 0.45)",
+          50: "rgba(255, 255, 255, 0.50)",
+          55: "rgba(255, 255, 255, 0.55)",
+          60: "rgba(255, 255, 255, 0.6)",
+          65: "rgba(255, 255, 255, 0.65)",
+          70: "rgba(255, 255, 255, 0.7)",
+          75: "rgba(255, 255, 255, 0.75)",
+          80: "rgba(255, 255, 255, 0.8)",
+          85: "rgba(255, 255, 255, 0.85)",
+          90: "rgba(255, 255, 255, 0.9)",
+          95: "rgba(255, 255, 255, 0.95)",
+          96: "rgba(255, 255, 255, 0.96)",
+          97: "rgba(255, 255, 255, 0.97)",
+          98: "rgba(255, 255, 255, 0.98)",
+          99: "rgba(255, 255, 255, 0.99)",
+        },
+      },
       zIndex: {
         n1: "-1",
       },
@@ -16,6 +42,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        baloo: ["'Baloo Da 2'", "cursive"],
+        caveat: ["Caveat", "cursive"],
+        josefin: ["'Josefin Slab'", "serif"],
         serif: ["'Suez One'", "Georgia", "Cambria"],
       },
       inset: {

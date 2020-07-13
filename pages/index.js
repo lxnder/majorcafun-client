@@ -5,6 +5,7 @@ import Search from "../components//activity/Search";
 import Activities from "../components/activity/Activities";
 import Navbar from "../components/layout/Navbar";
 import DbState from "../context/DbContext/DbState";
+import WelcomeScreen from "../components/overlay/WelcomeScreen";
 
 export default function Home() {
   const bgClasses = classNames(
@@ -26,7 +27,8 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className={bgClasses} style={{ backgroundImage: `url(bg2.svg)` }} />
+      {/* <div className={bgClasses} style={{ backgroundImage: `url(bg2.svg)` }} /> */}
+      <WelcomeScreen />
       <ToastContainer />
       <div className={containerClasses}>
         <Navbar />
