@@ -1,5 +1,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+<<<<<<< HEAD
+=======
+@import "tailwindcss/utilities";
+>>>>>>> db73de834db27e82fbc1ba86a2a14a837aad08c5
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 
@@ -31,5 +35,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(183, 217, 255);
 }
+<<<<<<< HEAD
 
 @import "tailwindcss/utilities";
+=======
+>>>>>>> db73de834db27e82fbc1ba86a2a14a837aad08c5
