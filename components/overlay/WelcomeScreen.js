@@ -1,8 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import Card from "./Card";
+import PropTypes from "prop-types";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ onClick }) => {
   const mainDivClasses = classNames(
     "w-screen h-screen",
     "absolute top-0 left-0",
@@ -37,16 +38,20 @@ const WelcomeScreen = () => {
     <div className={mainDivClasses}>
       <div className={imageDiv} style={{ backgroundImage: "url(bg.jpg)" }}>
         <div className={containerClasses(true)}>
-          <Card />
+          <Card onClick={onClick} />
         </div>
       </div>
       <div className={infoDiv}>
         <div className={containerClasses(false)}>
-          <Card />
+          <Card onClick={onClick} />
         </div>
       </div>
     </div>
   );
+};
+
+WelcomeScreen.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default WelcomeScreen;

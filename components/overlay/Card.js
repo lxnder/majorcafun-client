@@ -1,7 +1,8 @@
 import React from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
-const Card = () => {
+const Card = ({ onClick }) => {
   const titleContainerClasses = classNames(
     "w-full h-16",
     "flex items-center justify-center"
@@ -32,11 +33,15 @@ const Card = () => {
       <div className={titleContainerClasses}>
         <p className={titleClasses}>MAJORCAFUN</p>
       </div>
-      <div className={btnContainerClasses}>
+      <div className={btnContainerClasses} onClick={onClick}>
         <p className={btnClasses}>DISCOVER</p>
       </div>
     </>
   );
+};
+
+Card.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Card;

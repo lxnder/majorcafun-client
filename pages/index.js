@@ -6,8 +6,11 @@ import Activities from "../components/activity/Activities";
 import Navbar from "../components/layout/Navbar";
 import DbState from "../context/DbContext/DbState";
 import WelcomeScreen from "../components/overlay/WelcomeScreen";
+import { useState } from "react";
 
 export default function Home() {
+  const [overlayIsActive, setOverlayIsActive] = useState(true);
+
   const bgClasses = classNames(
     "fixed w-screen h-screen",
     "z-n1 bg-cover bg-no-repeat bg-center"
@@ -28,17 +31,20 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       {/* <div className={bgClasses} style={{ backgroundImage: `url(bg2.svg)` }} /> */}
-      <WelcomeScreen />
       <ToastContainer />
-      <div className={containerClasses}>
-        <Navbar />
-        <div className={mainDivClasses}>
-          <DbState>
-            <Search />
-            <Activities />
-          </DbState>
+      {overlayIsActive ? (
+        <WelcomeScreen onClick={() => setOverlayIsActive(false)} />
+      ) : (
+        <div className={containerClasses}>
+          <Navbar />
+          <div className={mainDivClasses}>
+            <DbState>
+              <Search />
+              <Activities />
+            </DbState>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
