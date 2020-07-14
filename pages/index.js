@@ -29,7 +29,7 @@ export default function Home() {
   const containerClasses = classNames("container h-auto mx-auto px-4");
 
   const mainDivClasses = classNames(
-    "grid grid-cols-12",
+    "grid grid-cols-12 gap-5",
     "pt-0 pb-16 md:pt-8 lg:pt-8 xl:pt-8"
   );
 
