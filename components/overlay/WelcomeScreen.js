@@ -2,6 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Card from "./Card";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 const WelcomeScreen = ({ onClick }) => {
   const mainDivClasses = classNames(
@@ -35,7 +36,13 @@ const WelcomeScreen = ({ onClick }) => {
     );
 
   return (
-    <div className={mainDivClasses}>
+    <motion.div
+      className={mainDivClasses}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className={imageDiv} style={{ backgroundImage: "url(bg.jpg)" }}>
         <div className={containerClasses(true)}>
           <Card onClick={onClick} />
@@ -46,7 +53,7 @@ const WelcomeScreen = ({ onClick }) => {
           <Card onClick={onClick} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
