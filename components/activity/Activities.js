@@ -16,19 +16,16 @@ const Activities = () => {
   if (activities[0] === "initial") {
     return (
       <div className={initialDivClasses}>
-        <p className="text-4xl font-semibold text-center text-blue-600">
-          Discover cool activities in Majorca!
-        </p>
-        <p className="mt-4 text-2xl font-semibold text-center text-blue-400">
-          Apply some filters and search for fun ;)
+        <p className="hidden text-2xl text-center text-gray-400 md:block font-muli">
+          -APPLY SOME FILTERS TO SEARCH ACTIVITIES-
         </p>
       </div>
     );
   } else if (activities.length < 1) {
     return (
       <div className={initialDivClasses}>
-        <p className="text-4xl font-semibold text-gray-700">
-          No results found :(
+        <p className="text-2xl text-center text-red-400 md:text-gray-400 font-muli">
+          -NO RESULTS FOUND-
         </p>
       </div>
     );

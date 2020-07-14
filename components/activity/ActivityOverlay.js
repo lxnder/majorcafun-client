@@ -29,6 +29,7 @@ const ActivityOverlay = ({ activity, onClose }) => {
     "w-screen h-screen",
     "fixed top-0 left-0",
     "flex flex-col",
+    "font-quicksand",
     "z-20",
     "p-10"
   );
@@ -57,7 +58,7 @@ const ActivityOverlay = ({ activity, onClose }) => {
     "bg-white",
     "rounded-full",
     "cursor-pointer ",
-    "hover:bg-red-400"
+    "hover:bg-teal-300"
   );
 
   const infoClasses = classNames(

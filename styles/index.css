@@ -1,11 +1,41 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Caveat&family=Josefin+Slab:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./Caveat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat-Regular.ttf") format("truetype");
+}
+
+.bg-gradient {
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 66%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 66%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 66%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
 
 .Toastify__toast {
   text-align: center;
@@ -13,7 +43,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 /* Track */
@@ -25,13 +55,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(183, 217, 255);
+  background: #38b2ac;
   border-radius: 0px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(183, 217, 255);
+  background: #38b2ac;
 }
 
 @import "tailwindcss/utilities";

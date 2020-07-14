@@ -30,6 +30,10 @@ module.exports = {
       },
       zIndex: {
         n1: "-1",
+        n2: "-2",
+        n3: "-3",
+        n4: "-4",
+        n5: "-5",
       },
       scale: {
         "102": "1.025",
@@ -41,7 +45,10 @@ module.exports = {
         "80": "0.80",
       },
       fontFamily: {
-        sans: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Helvetica", "Arial", "sans-serif"],
+        quicksand: ["Quicksand", "Arial", "sans-serif"],
+        muli: ["Muli", "Arial", "sans-serif"],
+        montserrat: ["Montserrat", "Helvetica", "Arial", "sans-serif"],
         baloo: ["'Baloo Da 2'", "cursive"],
         caveat: ["Caveat", "cursive"],
         josefin: ["'Josefin Slab'", "serif"],

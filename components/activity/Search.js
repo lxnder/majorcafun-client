@@ -82,7 +82,7 @@ const Search = () => {
   };
 
   const mainDivClasses = classNames(
-    "col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-2"
+    "col-span-12 md:col-span-3 lg:col-span-3 xl:col-span-2 font-quicksand"
   );
 
   const formClasses = classNames(
@@ -113,11 +113,10 @@ const Search = () => {
     "flex flex-col items-center justify-center",
     "py-1 mt-8 mb-4",
     "md:mt-4 lg:mt-4 xl:mt-4",
-    "text-lg font-semibold text-blue-500",
+    "text-lg font-semibold text-teal-500",
     "transition-all duration-150 ease-out transform",
-    "border border-blue-500",
-    "rounded-md",
-    "hover:bg-blue-500 hover:text-white",
+    "border border-teal-500",
+    "hover:bg-teal-500 hover:text-white",
     "focus:outline-none"
   );
 
@@ -126,7 +125,7 @@ const Search = () => {
       <form onSubmit={onSubmit} className={formClasses}>
         <div id="category-filters" className={filterClasses}>
           <div id="wrapper" className={wrapperClasses}>
-            <p className="mb-2 font-semibold md:ml-2 lg:ml-2 xl:ml-2">
+            <p className="mb-2 font-semibold text-teal-800 md:ml-2 lg:ml-2 xl:ml-2">
               Category
             </p>
             {categories.map(c => (
@@ -148,7 +147,7 @@ const Search = () => {
 
         <div id="group-type-filters" className={filterClasses}>
           <div id="wrapper" className={wrapperClasses}>
-            <p className="mb-2 font-semibold md:ml-2 lg:ml-2 xl:ml-2">
+            <p className="mb-2 font-semibold text-teal-800 md:ml-2 lg:ml-2 xl:ml-2">
               Recommended
             </p>
             {groupTypes.map(gt => (

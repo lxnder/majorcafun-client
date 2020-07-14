@@ -25,7 +25,7 @@ const Card = ({ onClick }) => {
 
   const btnClasses = classNames(
     "px-4 py-2",
-    "font-sans text-base text-center "
+    "font-montserrat text-base text-center "
   );
 
   return (

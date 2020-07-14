@@ -20,7 +20,8 @@ const Activity = ({ activity }) => {
     "grid grid-cols-12",
     "bg-white bg-opacity-95",
     "mb-4",
-    "rounded-md",
+    "rounded-r-md",
+    "font-quicksand",
     "cursor-pointer",
     "transition-all transform duration-500 ease-out",
     "hover:scale-102 hover:bg-opacity-100"
@@ -50,7 +51,7 @@ const Activity = ({ activity }) => {
           <div id="tags" className="flex flex-row flex-wrap pt-2">
             {tags.map(tag => (
               <div
-                className="px-2 py-1 mt-1 mr-1 bg-blue-600 rounded-full"
+                className="px-2 py-1 mt-1 mr-1 bg-teal-600 rounded-full"
                 key={`${id}_${tag}`}
               >
                 <p className="text-xs text-white">{tag}</p>
