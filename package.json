@@ -7,20 +7,20 @@
     "classnames": "^2.2.6",
     "framer-motion": "^1.11.1",
     "next": "9.4.4",
+    "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-toastify": "^6.0.5"
+    "react-toastify": "^6.0.5",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "postcss-preset-env": "^6.7.0",
-    "tailwindcss": "^1.4.6"
+    "concurrently": "^5.2.0"
   },
   "scripts": {
     "client-dev": "next dev",
     "server-dev": "npm run dev --prefix ../majorcafun-server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
-    "start": "next start",
+    "start": "npm run build && next start",
     "build": "NODE_ENV=production next build",
     "build:css": "postcss styles/index.css -o styles/main.css"
   }
